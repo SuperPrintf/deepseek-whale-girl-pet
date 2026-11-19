@@ -1,0 +1,9 @@
+# Release artifacts built from dsh/ and attached to the GitHub release.
+/deepseek-whale-girl-dsh-*.zip
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~

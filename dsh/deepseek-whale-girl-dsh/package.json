@@ -1,0 +1,33 @@
+{
+  "name": "@local/whale-girl",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DeepSeek 鲸鱼娘伙伴：输入框下方按会话状态播放动画，并替换首页的像素鲸鱼。",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.png",
+    "./assets/*": "./lib/assets/*"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "lib/assets",
+    "icon.png",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}
